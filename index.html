@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Reparación, mantenimiento e instalación de aire acondicionado. Ductería, drywall y sistemas contra incendios. Cotiza por WhatsApp." />
+  <title>Servicios de Aire Acondicionado | Cotiza por WhatsApp</title>
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a33;
+      --soft:#121f3f;
+      --text:#eaf0ff;
+      --muted:#b9c5e6;
+      --brand:#4da3ff;
+      --brand2:#45e3c8;
+      --warning:#ffcc66;
+      --ok:#5dff9a;
+      --shadow: 0 12px 35px rgba(0,0,0,.35);
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 1120px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 700px at 15% 0%, rgba(77,163,255,.18), transparent 55%),
+                  radial-gradient(1000px 600px at 90% 20%, rgba(69,227,200,.16), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+
+    /* Header */
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      background: rgba(11,18,32,.72);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.2px;
+    }
+    .logo{
+      width:36px; height:36px; border-radius:12px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 10px 25px rgba(77,163,255,.25);
+      display:grid; place-items:center; color:#071022; font-weight:900;
+    }
+    .navlinks{display:flex; gap:14px; align-items:center}
+    .navlinks a{color:var(--muted); font-weight:600; font-size:14px; padding:10px 10px; border-radius:12px}
+    .navlinks a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+    .cta{
+      display:flex; gap:10px; align-items:center;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      padding:11px 14px;
+      border-radius:14px;
+      font-weight:800;
+      font-size:14px;
+      cursor:pointer;
+      transition:.18s ease;
+      box-shadow: 0 6px 18px rgba(0,0,0,.18);
+    }
+    .btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.18); background:rgba(255,255,255,.08)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(77,163,255,.95), rgba(69,227,200,.85));
+      color:#061022;
+      border:none;
+    }
+    .btn.primary:hover{filter:brightness(1.05)}
+    .btn.ghost{background:transparent}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background: rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.10);
+      color:var(--muted);
+      font-weight:700;
+      font-size:13px;
+    }
+
+    /* Hero */
+    .hero{
+      padding:54px 0 26px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.09);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+    }
+    .hero-main{padding:26px}
+    .kicker{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-bottom:14px}
+    h1{
+      margin:0 0 12px;
+      font-size: clamp(28px, 3.2vw, 44px);
+      line-height:1.08;
+      letter-spacing:-.7px;
+    }
+    .lead{
+      margin:0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height:1.55;
+      max-width: 60ch;
+    }
+    .bullets{
+      display:grid; gap:10px; margin:0 0 18px; padding:0; list-style:none;
+      grid-template-columns: 1fr 1fr;
+    }
+    .bullets li{
+      padding:12px 12px;
+      border-radius:14px;
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.07);
+      color: var(--text);
+      font-weight:700;
+      font-size:14px;
+      display:flex; gap:10px; align-items:flex-start;
+    }
+    .dot{width:10px; height:10px; border-radius:999px; background: var(--ok); margin-top:5px; flex:0 0 auto}
+
+    .hero-actions{display:flex; gap:10px; flex-wrap:wrap}
+    .note{margin-top:12px; color: rgba(185,197,230,.9); font-size:13px}
+    .hero-side{padding:18px}
+    .side-title{font-weight:900; margin:0 0 10px; letter-spacing:.1px}
+    .trust{
+      display:grid; gap:10px; margin-top:10px;
+    }
+    .trust .item{
+      padding:14px;
+      border-radius:16px;
+      background: rgba(18,31,63,.8);
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .item b{display:block; margin-bottom:4px}
+    .item span{color:var(--muted); font-size:13px; line-height:1.35}
+
+    /* Sections */
+    section{padding:28px 0}
+    .section-head{display:flex; align-items:flex-end; justify-content:space-between; gap:12px; margin-bottom:14px}
+    .section-head h2{margin:0; font-size:22px; letter-spacing:-.3px}
+    .section-head p{margin:0; color:var(--muted); max-width:70ch; line-height:1.5}
+
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+    .grid2{display:grid; grid-template-columns: repeat(2, 1fr); gap:14px}
+    .svc{
+      padding:18px;
+      border-radius: var(--radius);
+      background: rgba(15,26,51,.7);
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow: 0 10px 26px rgba(0,0,0,.22);
+    }
+    .svc h3{margin:0 0 8px; font-size:16px}
+    .svc p{margin:0 0 14px; color:var(--muted); line-height:1.5; font-size:14px}
+    .svc .mini{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:12px}
+    .tag{
+      font-size:12px; font-weight:800; color:#061022;
+      background: rgba(77,163,255,.95);
+      padding:7px 10px; border-radius:999px;
+    }
+    .tag.alt{background: rgba(69,227,200,.9)}
+    .tag.soft{background: rgba(255,255,255,.14); color: var(--text); border:1px solid rgba(255,255,255,.12)}
+    .svc .btn{width:100%}
+
+    /* Process */
+    .steps{display:grid; gap:12px}
+    .step{
+      padding:16px; border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      display:flex; gap:12px; align-items:flex-start;
+    }
+    .num{
+      width:34px; height:34px; border-radius:12px;
+      background: rgba(77,163,255,.18);
+      border:1px solid rgba(77,163,255,.35);
+      display:grid; place-items:center;
+      font-weight:900;
+      color: var(--text);
+      flex:0 0 auto;
+    }
+    .step b{display:block; margin-bottom:4px}
+    .step span{color:var(--muted); font-size:14px; line-height:1.45}
+
+    /* Qualifier form */
+    .qualify{
+      padding:18px;
+      border-radius: var(--radius2);
+      background: linear-gradient(135deg, rgba(77,163,255,.14), rgba(69,227,200,.10));
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow: var(--shadow);
+    }
+    form{margin:0}
+    .formgrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top:12px;
+    }
+    label{display:block; font-size:13px; font-weight:800; margin-bottom:6px; color: rgba(234,240,255,.92)}
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(11,18,32,.55);
+      color: var(--text);
+      outline:none;
+    }
+    textarea{min-height: 96px; resize: vertical}
+    input::placeholder, textarea::placeholder{color: rgba(185,197,230,.65)}
+    .full{grid-column: 1 / -1}
+    .form-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+    .fineprint{color: rgba(185,197,230,.85); font-size:12.5px; line-height:1.45; margin:8px 0 0}
+    .warning{color: rgba(255,204,102,.92); font-weight:800}
+
+    /* FAQ */
+    details{
+      background: rgba(15,26,51,.65);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius: 16px;
+      padding:14px 14px;
+    }
+    summary{cursor:pointer; font-weight:900}
+    details p{margin:10px 0 0; color:var(--muted); line-height:1.55}
+
+    /* Footer */
+    footer{
+      padding:26px 0 40px;
+      border-top:1px solid rgba(255,255,255,.08);
+      color: rgba(185,197,230,.85);
+    }
+    .footgrid{display:grid; grid-template-columns: 1.2fr .8fr; gap:14px; align-items:start}
+    .small{font-size:13px; line-height:1.5}
+    .links{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    .links a{padding:10px 12px; border-radius:14px; border:1px solid rgba(255,255,255,.10); background: rgba(255,255,255,.04)}
+    .links a:hover{background: rgba(255,255,255,.06)}
+
+    /* Floating WhatsApp */
+    .floatwa{
+      position:fixed; right:18px; bottom:18px; z-index:60;
+      border-radius: 999px;
+      padding: 12px 14px;
+      background: linear-gradient(135deg, rgba(69,227,200,.95), rgba(77,163,255,.85));
+      color:#061022;
+      font-weight:900;
+      border:none;
+      box-shadow: 0 18px 40px rgba(0,0,0,.35);
+      cursor:pointer;
+      display:flex; align-items:center; gap:10px;
+    }
+    .floatwa:hover{filter:brightness(1.05)}
+    .waicon{
+      width:34px; height:34px; border-radius: 12px;
+      background: rgba(6,16,34,.12);
+      display:grid; place-items:center;
+      font-weight:900;
+    }
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .hero-grid{grid-template-columns: 1fr}
+      .bullets{grid-template-columns: 1fr}
+      .grid3{grid-template-columns: 1fr}
+      .grid2{grid-template-columns: 1fr}
+      .formgrid{grid-template-columns: 1fr}
+      .navlinks{display:none}
+      .footgrid{grid-template-columns: 1fr}
+      .links{justify-content:flex-start}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand">
+          <div class="logo">AC</div>
+          <div>
+            <div style="font-weight:900; line-height:1">NOMBRE DE LA EMPRESA</div>
+            <div style="font-size:12px; color:var(--muted); font-weight:700">Aire acondicionado • Ductería • Servicios generales</div>
+          </div>
+        </div>
+
+        <nav class="navlinks" aria-label="Navegación">
+          <a href="#servicios">Servicios</a>
+          <a href="#proceso">Cómo trabajamos</a>
+          <a href="#cotizar">Cotizar</a>
+          <a href="#faq">Preguntas</a>
+        </nav>
+
+        <div class="cta">
+          <a class="btn ghost" href="#cotizar">Cotizar</a>
+          <button class="btn primary js-wa" data-service="Cotización general (sin detalles)">Cotizar por WhatsApp</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap hero">
+      <div class="hero-grid">
+        <div class="card hero-main">
+          <div class="kicker">
+            <span class="pill">Atención rápida</span>
+            <span class="pill">Servicio residencial y empresarial</span>
+            <span class="pill">Diagnóstico + solución</span>
+          </div>
+
+          <h1>Reparación, mantenimiento e instalación de <span style="color:var(--brand2)">aire acondicionado</span> — cotiza en minutos por WhatsApp</h1>
+          <p class="lead">
+            Si tu equipo no enfría, gotea, hace ruido o consume demasiado, lo revisamos y te proponemos la mejor solución.
+            Para empresas también hacemos <b>ductería</b>, <b>drywall</b> y <b>sistemas contra incendios</b>.
+          </p>
+
+          <ul class="bullets">
+            <li><span class="dot"></span> <span>Visita técnica y recomendación clara (sin vueltas)</span></li>
+            <li><span class="dot"></span> <span>Trabajo limpio + checklist de servicio</span></li>
+            <li><span class="dot"></span> <span>Soporte post-servicio (si algo falla, lo vemos)</span></li>
+            <li><span class="dot"></span> <span>Cotización por WhatsApp con preguntas exactas</span></li>
+          </ul>
+
+          <div class="hero-actions">
+            <button class="btn primary js-wa" data-service="Aire acondicionado (reparación/mantenimiento/instalación)">📲 Cotizar por WhatsApp</button>
+            <a class="btn" href="#servicios">Ver servicios</a>
+            <a class="btn" href="#cotizar">Responder 5 preguntas (mejor precio)</a>
+          </div>
+
+          <div class="note">
+            <span class="warning">Tip:</span> Mientras más datos nos des (modelo, falla, ubicación), más precisa la cotización.
+          </div>
+        </div>
+
+        <aside class="card hero-side">
+          <p class="side-title">Lo que más piden</p>
+          <div class="trust">
+            <div class="item">
+              <b>✅ Mantenimiento preventivo</b>
+              <span>Ideal para evitar fallas y reducir consumo. Recomendado cada temporada/calor.</span>
+            </div>
+            <div class="item">
+              <b>✅ Reparación (no enfría / gotea)</b>
+              <span>Revisión, diagnóstico y solución. Te explicamos qué se hace y por qué.</span>
+            </div>
+            <div class="item">
+              <b>✅ Instalación de equipos</b>
+              <span>Instalación correcta = mejor rendimiento. Se valida ubicación y requerimientos.</span>
+            </div>
+            <div class="item">
+              <b>🏢 Empresas: ductería / contra incendios</b>
+              <span>Proyectos por alcance: inspección, propuesta y cronograma de ejecución.</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <section id="servicios">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Servicios</h2>
+            <p>Organizamos por lo más solicitado. Cada botón te lleva a WhatsApp con el servicio pre-seleccionado.</p>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <div class="svc">
+            <div class="mini">
+              <span class="tag">Más vendido</span>
+              <span class="tag soft">Residencial / Negocio</span>
+            </div>
+            <h3>Aire acondicionado — mantenimiento</h3>
+            <p>Limpieza, revisión eléctrica, presión, drenajes y desempeño. Previene fallas y baja consumo.</p>
+            <button class="btn primary js-wa" data-service="Mantenimiento de aire acondicionado">Cotizar por WhatsApp</button>
+          </div>
+
+          <div class="svc">
+            <div class="mini">
+              <span class="tag alt">Urgente</span>
+              <span class="tag soft">Diagnóstico</span>
+            </div>
+            <h3>Aire acondicionado — reparación</h3>
+            <p>No enfría, gotea, hielo, ruidos, olor o apagones. Vamos al punto: causa → solución → costo.</p>
+            <button class="btn primary js-wa" data-service="Reparación de aire acondicionado">Cotizar por WhatsApp</button>
+          </div>
+
+          <div class="svc">
+            <div class="mini">
+              <span class="tag">Instalación</span>
+              <span class="tag soft">Correcta = dura más</span>
+            </div>
+            <h3>Aire acondicionado — instalación</h3>
+            <p>Instalación con validación de ubicación, drenajes y desempeño. Te explicamos el alcance antes de iniciar.</p>
+            <button class="btn primary js-wa" data-service="Instalación de aire acondicionado">Cotizar por WhatsApp</button>
+          </div>
+        </div>
+
+        <div style="height:14px"></div>
+
+        <div class="grid3">
+          <div class="svc">
+            <div class="mini">
+              <span class="tag soft">Empresas</span>
+              <span class="tag">Ductería</span>
+            </div>
+            <h3>Fabricación e instalación de ductería</h3>
+            <p>Diseño/medidas, fabricación e instalación. Ideal para oficinas, locales, cocinas y sistemas HVAC.</p>
+            <button class="btn js-wa" data-service="Ductería (fabricación e instalación)">Hablar por WhatsApp</button>
+          </div>
+
+          <div class="svc">
+            <div class="mini">
+              <span class="tag soft">Obra</span>
+              <span class="tag">Drywall</span>
+            </div>
+            <h3>Drywall</h3>
+            <p>Divisiones, cielos, correcciones y acabados. Coordinación con cronograma de obra.</p>
+            <button class="btn js-wa" data-service="Drywall (cotización)">Hablar por WhatsApp</button>
+          </div>
+
+          <div class="svc">
+            <div class="mini">
+              <span class="tag soft">Seguridad</span>
+              <span class="tag">Contra incendios</span>
+            </div>
+            <h3>Sistema contra incendios</h3>
+            <p>Inspección, propuesta y ejecución según alcance. (Para proyectos: enviamos checklist de requisitos).</p>
+            <button class="btn js-wa" data-service="Sistema contra incendios (inspección/proyecto)">Hablar por WhatsApp</button>
+          </div>
+        </div>
+
+        <div style="height:14px"></div>
+
+        <div class="grid2">
+          <div class="svc">
+            <h3>Venta de equipos de aire acondicionado</h3>
+            <p>Te ayudamos a elegir capacidad y tipo según metros², uso y presupuesto. (En WhatsApp te pedimos 3 datos y te recomendamos).</p>
+            <button class="btn js-wa" data-service="Compra de equipo de aire acondicionado (asesoría)">Pedir recomendación</button>
+          </div>
+          <div class="svc">
+            <h3>Venta de cómputo</h3>
+            <p>Si el cliente quiere mantenerlo aquí, lo dejamos como “servicio adicional”. Ideal separar campañas para no mezclar intención.</p>
+            <button class="btn js-wa" data-service="Venta de cómputo (consulta)">Consultar por WhatsApp</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Cómo trabajamos (simple y sin fricción)</h2>
+            <p>Esto reduce “curiosos”: la persona entiende qué sigue y qué información necesitamos para cotizar bien.</p>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="num">1</div>
+            <div>
+              <b>Respondes 5 preguntas (o escribes directo)</b>
+              <span>Servicio, ubicación, tipo de espacio, urgencia y detalle del problema/equipo.</span>
+            </div>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <div>
+              <b>Te damos 2 opciones claras</b>
+              <span>Opción rápida (resolver ya) y opción recomendada (mejor costo/beneficio).</span>
+            </div>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <div>
+              <b>Agendamos y ejecutamos</b>
+              <span>Confirmamos horario, llegamos, realizamos el trabajo y validamos funcionamiento.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cotizar">
+      <div class="wrap">
+        <div class="qualify">
+          <div class="section-head" style="margin-bottom:6px">
+            <div>
+              <h2>Cotiza por WhatsApp (con filtro anti-curiosos)</h2>
+              <p>Completa esto y WhatsApp se abre con el mensaje armado. Así recibes leads más listos para comprar.</p>
+            </div>
+          </div>
+
+          <form id="leadForm">
+            <div class="formgrid">
+              <div>
+                <label for="name">Nombre</label>
+                <input id="name" name="name" placeholder="Ej: Carlos" required />
+              </div>
+
+              <div>
+                <label for="service">¿Qué necesitas?</label>
+                <select id="service" name="service" required>
+                  <option value="" selected disabled>Selecciona una opción</option>
+                  <option>Mantenimiento de aire acondicionado</option>
+                  <option>Reparación de aire acondicionado</option>
+                  <option>Instalación de aire acondicionado</option>
+                  <option>Ductería (fabricación e instalación)</option>
+                  <option>Drywall</option>
+                  <option>Sistema contra incendios</option>
+                  <option>Compra de equipo de aire acondicionado</option>
+                  <option>Venta de cómputo</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="zone">Ciudad/Zona</label>
+                <input id="zone" name="zone" placeholder="Ej: Centro / Norte / (tu ciudad)" required />
+              </div>
+
+              <div>
+                <label for="place">Tipo de espacio</label>
+                <select id="place" name="place" required>
+                  <option value="" selected disabled>Selecciona</option>
+                  <option>Hogar</option>
+                  <option>Negocio</option>
+                  <option>Oficina / Empresa</option>
+                  <option>Edificio / Condominio</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="urgency">Urgencia</label>
+                <select id="urgency" name="urgency" required>
+                  <option value="" selected disabled>Selecciona</option>
+                  <option>Hoy</option>
+                  <option>En 24-48h</option>
+                  <option>Esta semana</option>
+                  <option>Solo cotización (sin urgencia)</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="budget">Presupuesto estimado (opcional)</label>
+                <select id="budget" name="budget">
+                  <option value="" selected>No estoy seguro</option>
+                  <option>Básico</option>
+                  <option>Intermedio</option>
+                  <option>Premium</option>
+                </select>
+              </div>
+
+              <div class="full">
+                <label for="details">Detalle (modelo, falla, fotos si tienes)</label>
+                <textarea id="details" name="details" placeholder="Ej: Split 12k BTU, no enfría, gotea por la unidad interna. Hace 6 meses no se da mantenimiento."></textarea>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Enviar a WhatsApp con mis datos</button>
+              <button class="btn js-wa" type="button" data-service="Cotización rápida (no quiero formulario)">Escribir directo (sin formulario)</button>
+            </div>
+
+            <p class="fineprint">
+              <span class="warning">Nota:</span> Atendemos solicitudes reales de servicio/proyecto. Si solo estás “cotizando por curiosidad”, es mejor esperar a tener fecha y ubicación definidas.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Preguntas frecuentes</h2>
+            <p>Resolvemos las dudas que más frenan la decisión.</p>
+          </div>
+        </div>
+
+        <div class="grid2">
+          <details>
+            <summary>¿Dan precio por WhatsApp?</summary>
+            <p>Sí, si nos das datos mínimos (tipo de servicio, ubicación, equipo/problema). Para fallas complejas puede requerirse visita para diagnóstico.</p>
+          </details>
+
+          <details>
+            <summary>¿Trabajan hogares y empresas?</summary>
+            <p>Sí. Para empresas/proyectos (ductería, contra incendios, drywall) se cotiza por alcance y visita/inspección.</p>
+          </details>
+
+          <details>
+            <summary>¿Qué necesito enviar para cotizar mejor?</summary>
+            <p>Ubicación, tipo de espacio, urgencia, fotos del equipo/placa (si aplica) y una descripción breve del problema.</p>
+          </details>
+
+          <details>
+            <summary>¿Cómo evito gastar de más?</summary>
+            <p>Con mantenimiento preventivo y una instalación correcta. Muchas “reparaciones” vienen de drenajes sucios, mala ubicación o falta de mantenimiento.</p>
+          </details>
+        </div>
+
+        <div style="height:14px"></div>
+
+        <div class="card" style="padding:18px">
+          <div class="section-head" style="margin:0">
+            <div>
+              <h2 style="margin-bottom:6px">¿Listo para cotizar?</h2>
+              <p>Haz clic y te abrimos WhatsApp con el mensaje pre-armado.</p>
+            </div>
+            <div>
+              <button class="btn primary js-wa" data-service="Agendar servicio / cotización">📲 Cotizar por WhatsApp</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap footgrid">
+      <div>
+        <div class="brand" style="margin-bottom:8px">
+          <div class="logo">AC</div>
+          <div style="font-weight:900">NOMBRE DE LA EMPRESA</div>
+        </div>
+        <div class="small">
+          Servicios: Aire acondicionado (reparación, mantenimiento e instalación) • Ductería • Drywall • Sistemas contra incendios • Venta de equipos • Venta de cómputo<br/>
+          <span style="opacity:.9">© <span id="year"></span> — Todos los derechos reservados.</span>
+        </div>
+      </div>
+
+      <div class="links">
+        <a href="#servicios">Servicios</a>
+        <a href="#cotizar">Cotizar</a>
+        <a href="#faq">FAQ</a>
+        <a class="js-wa" data-service="Contacto desde footer" href="javascript:void(0)">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="floatwa js-wa" data-service="Botón flotante (WhatsApp)">
+    <span class="waicon">WA</span> Cotizar por WhatsApp
+  </button>
+
+  <script>
+    // =========================
+    // CONFIG — CAMBIA ESTO
+    // =========================
+    const WHATSAPP_NUMBER = "51999999999"; // <-- pon aquí el número real en formato internacional, sin "+"
+    const COMPANY_NAME = "NOMBRE DE LA EMPRESA"; // opcional para el mensaje
+
+    function buildWaUrl(message){
+      const encoded = encodeURIComponent(message);
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
+    }
+
+    function openWhatsApp(message){
+      const url = buildWaUrl(message);
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    function baseMessage(service){
+      return `Hola, soy *[NOMBRE]*. Quiero cotizar: *${service}*.\n\n` +
+             `📍 Zona: [ZONA]\n🏠 Tipo de espacio: [ESPACIO]\n⏱️ Urgencia: [URGENCIA]\n💰 Presupuesto: [PRESUPUESTO]\n\n` +
+             `📝 Detalle: [DETALLE]\n\n` +
+             `¿Me confirmas disponibilidad y un estimado? Gracias.`;
+    }
+
+    // Quick buttons
+    document.querySelectorAll(".js-wa").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const service = btn.getAttribute("data-service") || "Cotización";
+        const msg = `Hola, quiero cotizar con *${COMPANY_NAME}*.\nServicio: *${service}*.\n\nMi zona es: ____\nTipo de espacio: (Hogar/Negocio/Empresa)\nUrgencia: (Hoy/24-48h/Esta semana)\nDetalle: ____\n\n¿Me ayudas con disponibilidad y estimado?`;
+        openWhatsApp(msg);
+      });
+    });
+
+    // Qualifier form -> WhatsApp
+    const form = document.getElementById("leadForm");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = (document.getElementById("name").value || "").trim();
+      const service = document.getElementById("service").value;
+      const zone = (document.getElementById("zone").value || "").trim();
+      const place = document.getElementById("place").value;
+      const urgency = document.getElementById("urgency").value;
+      const budget = document.getElementById("budget").value || "No estoy seguro";
+      const details = (document.getElementById("details").value || "").trim() || "Sin detalles adicionales por ahora.";
+
+      let msg = baseMessage(service);
+      msg = msg.replace("[NOMBRE]", name)
+               .replace("[ZONA]", zone)
+               .replace("[ESPACIO]", place)
+               .replace("[URGENCIA]", urgency)
+               .replace("[PRESUPUESTO]", budget)
+               .replace("[DETALLE]", details);
+
+      msg = `Hola, soy *${name}* y quiero cotizar con *${COMPANY_NAME}*.\n\n` +
+            `✅ Servicio: *${service}*\n📍 Zona: *${zone}*\n🏠 Espacio: *${place}*\n⏱️ Urgencia: *${urgency}*\n💰 Presupuesto: *${budget}*\n\n📝 Detalle: ${details}\n\n¿Me confirmas disponibilidad y un estimado?`;
+
+      openWhatsApp(msg);
+    });
+
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
