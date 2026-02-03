@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Reparación, mantenimiento e instalación de aire acondicionado. Ductería, drywall y sistemas contra incendios. Cotiza por WhatsApp." />
-  <title>Servicios de Aire Acondicionado | Cotiza por WhatsApp</title>
+  <meta name="description" content="ATM Smart Clima Service S.A.C. — Reparación, mantenimiento e instalación de aire acondicionado 24/7. Fabricación e instalación de ductería. Cotiza por WhatsApp." />
+  <title>ATM Smart Clima Service S.A.C. | Aire Acondicionado 24/7 | WhatsApp</title>
 
   <style>
     :root{
@@ -13,8 +13,12 @@
       --soft:#121f3f;
       --text:#eaf0ff;
       --muted:#b9c5e6;
+
+      /* Brand: celeste + azul + plomo (aprox) */
       --brand:#4da3ff;
       --brand2:#45e3c8;
+      --steel:#9aa6bf;
+
       --warning:#ffcc66;
       --ok:#5dff9a;
       --shadow: 0 12px 35px rgba(0,0,0,.35);
@@ -30,6 +34,7 @@
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       background: radial-gradient(1200px 700px at 15% 0%, rgba(77,163,255,.18), transparent 55%),
                   radial-gradient(1000px 600px at 90% 20%, rgba(69,227,200,.16), transparent 55%),
+                  radial-gradient(1000px 600px at 60% 120%, rgba(154,166,191,.10), transparent 55%),
                   var(--bg);
       color:var(--text);
     }
@@ -51,6 +56,7 @@
     .brand{
       display:flex; align-items:center; gap:10px;
       font-weight:800; letter-spacing:.2px;
+      min-width: 240px;
     }
     .logo{
       width:36px; height:36px; border-radius:12px;
@@ -61,9 +67,7 @@
     .navlinks{display:flex; gap:14px; align-items:center}
     .navlinks a{color:var(--muted); font-weight:600; font-size:14px; padding:10px 10px; border-radius:12px}
     .navlinks a:hover{background:rgba(255,255,255,.06); color:var(--text)}
-    .cta{
-      display:flex; gap:10px; align-items:center;
-    }
+    .cta{display:flex; gap:10px; align-items:center}
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       gap:10px;
@@ -77,6 +81,7 @@
       cursor:pointer;
       transition:.18s ease;
       box-shadow: 0 6px 18px rgba(0,0,0,.18);
+      text-align:center;
     }
     .btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.18); background:rgba(255,255,255,.08)}
     .btn.primary{
@@ -98,9 +103,7 @@
     }
 
     /* Hero */
-    .hero{
-      padding:54px 0 26px;
-    }
+    .hero{padding:54px 0 26px}
     .hero-grid{
       display:grid;
       grid-template-columns: 1.25fr .75fr;
@@ -115,6 +118,7 @@
     }
     .hero-main{padding:26px}
     .kicker{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-bottom:14px}
+
     h1{
       margin:0 0 12px;
       font-size: clamp(28px, 3.2vw, 44px);
@@ -126,7 +130,7 @@
       color: var(--muted);
       font-size: 16px;
       line-height:1.55;
-      max-width: 60ch;
+      max-width: 62ch;
     }
     .bullets{
       display:grid; gap:10px; margin:0 0 18px; padding:0; list-style:none;
@@ -148,9 +152,7 @@
     .note{margin-top:12px; color: rgba(185,197,230,.9); font-size:13px}
     .hero-side{padding:18px}
     .side-title{font-weight:900; margin:0 0 10px; letter-spacing:.1px}
-    .trust{
-      display:grid; gap:10px; margin-top:10px;
-    }
+    .trust{display:grid; gap:10px; margin-top:10px}
     .trust .item{
       padding:14px;
       border-radius:16px;
@@ -184,6 +186,7 @@
       padding:7px 10px; border-radius:999px;
     }
     .tag.alt{background: rgba(69,227,200,.9)}
+    .tag.steel{background: rgba(154,166,191,.9)}
     .tag.soft{background: rgba(255,255,255,.14); color: var(--text); border:1px solid rgba(255,255,255,.12)}
     .svc .btn{width:100%}
 
@@ -258,7 +261,11 @@
     .footgrid{display:grid; grid-template-columns: 1.2fr .8fr; gap:14px; align-items:start}
     .small{font-size:13px; line-height:1.5}
     .links{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
-    .links a{padding:10px 12px; border-radius:14px; border:1px solid rgba(255,255,255,.10); background: rgba(255,255,255,.04)}
+    .links a{
+      padding:10px 12px; border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
     .links a:hover{background: rgba(255,255,255,.06)}
 
     /* Floating WhatsApp */
@@ -292,6 +299,7 @@
       .navlinks{display:none}
       .footgrid{grid-template-columns: 1fr}
       .links{justify-content:flex-start}
+      .brand{min-width:auto}
     }
   </style>
 </head>
@@ -301,10 +309,10 @@
     <div class="wrap">
       <div class="nav">
         <div class="brand">
-          <div class="logo">AC</div>
+          <div class="logo">ATM</div>
           <div>
-            <div style="font-weight:900; line-height:1">NOMBRE DE LA EMPRESA</div>
-            <div style="font-size:12px; color:var(--muted); font-weight:700">Aire acondicionado • Ductería • Servicios generales</div>
+            <div style="font-weight:900; line-height:1">ATM Smart Clima Service S.A.C.</div>
+            <div style="font-size:12px; color:var(--muted); font-weight:700">El clima ideal empieza con nosotros</div>
           </div>
         </div>
 
@@ -317,7 +325,7 @@
 
         <div class="cta">
           <a class="btn ghost" href="#cotizar">Cotizar</a>
-          <button class="btn primary js-wa" data-service="Cotización general (sin detalles)">Cotizar por WhatsApp</button>
+          <button class="btn primary js-wa" data-service="Cotización (general)">Cotizar por WhatsApp</button>
         </div>
       </div>
     </div>
@@ -328,53 +336,53 @@
       <div class="hero-grid">
         <div class="card hero-main">
           <div class="kicker">
-            <span class="pill">Atención rápida</span>
-            <span class="pill">Servicio residencial y empresarial</span>
-            <span class="pill">Diagnóstico + solución</span>
+            <span class="pill">Atención 24/7</span>
+            <span class="pill">Lima y provincias</span>
+            <span class="pill">Hogar + empresas</span>
           </div>
 
-          <h1>Reparación, mantenimiento e instalación de <span style="color:var(--brand2)">aire acondicionado</span> — cotiza en minutos por WhatsApp</h1>
+          <h1>Aire acondicionado: <span style="color:var(--brand2)">reparación, mantenimiento e instalación</span> — cotiza por WhatsApp en minutos</h1>
           <p class="lead">
-            Si tu equipo no enfría, gotea, hace ruido o consume demasiado, lo revisamos y te proponemos la mejor solución.
-            Para empresas también hacemos <b>ductería</b>, <b>drywall</b> y <b>sistemas contra incendios</b>.
+            Atención rápida y confiable para hogares y empresas. También realizamos <b>fabricación e instalación de ductería</b>.
+            Si estás fuera de Lima, atendemos con recargo (según ubicación).
           </p>
 
           <ul class="bullets">
-            <li><span class="dot"></span> <span>Visita técnica y recomendación clara (sin vueltas)</span></li>
-            <li><span class="dot"></span> <span>Trabajo limpio + checklist de servicio</span></li>
-            <li><span class="dot"></span> <span>Soporte post-servicio (si algo falla, lo vemos)</span></li>
-            <li><span class="dot"></span> <span>Cotización por WhatsApp con preguntas exactas</span></li>
+            <li><span class="dot"></span> <span>Respuesta por WhatsApp en 10–30 min (promedio)</span></li>
+            <li><span class="dot"></span> <span>Visita programada en 24–48 h (según agenda)</span></li>
+            <li><span class="dot"></span> <span>Diagnóstico/visita sin costo (según coordinación)</span></li>
+            <li><span class="dot"></span> <span>Servicio inteligente y eficiente (al grano)</span></li>
           </ul>
 
           <div class="hero-actions">
             <button class="btn primary js-wa" data-service="Aire acondicionado (reparación/mantenimiento/instalación)">📲 Cotizar por WhatsApp</button>
             <a class="btn" href="#servicios">Ver servicios</a>
-            <a class="btn" href="#cotizar">Responder 5 preguntas (mejor precio)</a>
+            <a class="btn" href="#cotizar">Responder preguntas (cotización más precisa)</a>
           </div>
 
           <div class="note">
-            <span class="warning">Tip:</span> Mientras más datos nos des (modelo, falla, ubicación), más precisa la cotización.
+            <span class="warning">Filtro:</span> Para cotizar necesitamos datos mínimos (zona, tipo de equipo y problema). Solicitudes sin información mínima no se atienden.
           </div>
         </div>
 
         <aside class="card hero-side">
-          <p class="side-title">Lo que más piden</p>
+          <p class="side-title">Lo más frecuente</p>
           <div class="trust">
             <div class="item">
-              <b>✅ Mantenimiento preventivo</b>
-              <span>Ideal para evitar fallas y reducir consumo. Recomendado cada temporada/calor.</span>
+              <b>✅ Falta de gas / bajo rendimiento</b>
+              <span>Evaluación del sistema y solución según diagnóstico (no se “adivina” por chat).</span>
             </div>
             <div class="item">
-              <b>✅ Reparación (no enfría / gotea)</b>
-              <span>Revisión, diagnóstico y solución. Te explicamos qué se hace y por qué.</span>
+              <b>✅ Equipo gotea / filtración de agua</b>
+              <span>Revisión de drenajes, instalación y estado general para eliminar la causa.</span>
             </div>
             <div class="item">
-              <b>✅ Instalación de equipos</b>
-              <span>Instalación correcta = mejor rendimiento. Se valida ubicación y requerimientos.</span>
+              <b>✅ No enciende / se apaga solo / fallas eléctricas</b>
+              <span>Validación eléctrica y componentes. Se explica qué se hará antes de iniciar.</span>
             </div>
             <div class="item">
-              <b>🏢 Empresas: ductería / contra incendios</b>
-              <span>Proyectos por alcance: inspección, propuesta y cronograma de ejecución.</span>
+              <b>🏢 Ductería (fabricación + instalación)</b>
+              <span>Soluciones integrales para proyectos. Coordinación por alcance y cronograma.</span>
             </div>
           </div>
         </aside>
@@ -386,73 +394,39 @@
         <div class="section-head">
           <div>
             <h2>Servicios</h2>
-            <p>Organizamos por lo más solicitado. Cada botón te lleva a WhatsApp con el servicio pre-seleccionado.</p>
+            <p>Selecciona el servicio y te abrimos WhatsApp con el mensaje listo (ya con preguntas clave).</p>
           </div>
         </div>
 
         <div class="grid3">
           <div class="svc">
             <div class="mini">
-              <span class="tag">Más vendido</span>
-              <span class="tag soft">Residencial / Negocio</span>
+              <span class="tag">Más pedido</span>
+              <span class="tag soft">Hogar / Empresa</span>
             </div>
-            <h3>Aire acondicionado — mantenimiento</h3>
-            <p>Limpieza, revisión eléctrica, presión, drenajes y desempeño. Previene fallas y baja consumo.</p>
+            <h3>Mantenimiento de aire acondicionado</h3>
+            <p>Ideal para evitar fallas, bajar consumo y mantener rendimiento. (Split, ventana, central, piso-techo, etc.).</p>
             <button class="btn primary js-wa" data-service="Mantenimiento de aire acondicionado">Cotizar por WhatsApp</button>
           </div>
 
           <div class="svc">
             <div class="mini">
               <span class="tag alt">Urgente</span>
-              <span class="tag soft">Diagnóstico</span>
+              <span class="tag soft">Según diagnóstico</span>
             </div>
-            <h3>Aire acondicionado — reparación</h3>
-            <p>No enfría, gotea, hielo, ruidos, olor o apagones. Vamos al punto: causa → solución → costo.</p>
+            <h3>Reparación de aire acondicionado</h3>
+            <p>No enfría, gotea, ruidos, fallas eléctricas, se apaga solo o consumo elevado. Cotización según evaluación.</p>
             <button class="btn primary js-wa" data-service="Reparación de aire acondicionado">Cotizar por WhatsApp</button>
           </div>
 
           <div class="svc">
             <div class="mini">
-              <span class="tag">Instalación</span>
+              <span class="tag steel">Instalación</span>
               <span class="tag soft">Correcta = dura más</span>
             </div>
-            <h3>Aire acondicionado — instalación</h3>
-            <p>Instalación con validación de ubicación, drenajes y desempeño. Te explicamos el alcance antes de iniciar.</p>
+            <h3>Instalación de aire acondicionado</h3>
+            <p>Instalación para hogar o empresa. Tiempo y alcance dependen del espacio y requerimientos.</p>
             <button class="btn primary js-wa" data-service="Instalación de aire acondicionado">Cotizar por WhatsApp</button>
-          </div>
-        </div>
-
-        <div style="height:14px"></div>
-
-        <div class="grid3">
-          <div class="svc">
-            <div class="mini">
-              <span class="tag soft">Empresas</span>
-              <span class="tag">Ductería</span>
-            </div>
-            <h3>Fabricación e instalación de ductería</h3>
-            <p>Diseño/medidas, fabricación e instalación. Ideal para oficinas, locales, cocinas y sistemas HVAC.</p>
-            <button class="btn js-wa" data-service="Ductería (fabricación e instalación)">Hablar por WhatsApp</button>
-          </div>
-
-          <div class="svc">
-            <div class="mini">
-              <span class="tag soft">Obra</span>
-              <span class="tag">Drywall</span>
-            </div>
-            <h3>Drywall</h3>
-            <p>Divisiones, cielos, correcciones y acabados. Coordinación con cronograma de obra.</p>
-            <button class="btn js-wa" data-service="Drywall (cotización)">Hablar por WhatsApp</button>
-          </div>
-
-          <div class="svc">
-            <div class="mini">
-              <span class="tag soft">Seguridad</span>
-              <span class="tag">Contra incendios</span>
-            </div>
-            <h3>Sistema contra incendios</h3>
-            <p>Inspección, propuesta y ejecución según alcance. (Para proyectos: enviamos checklist de requisitos).</p>
-            <button class="btn js-wa" data-service="Sistema contra incendios (inspección/proyecto)">Hablar por WhatsApp</button>
           </div>
         </div>
 
@@ -460,14 +434,39 @@
 
         <div class="grid2">
           <div class="svc">
-            <h3>Venta de equipos de aire acondicionado</h3>
-            <p>Te ayudamos a elegir capacidad y tipo según metros², uso y presupuesto. (En WhatsApp te pedimos 3 datos y te recomendamos).</p>
-            <button class="btn js-wa" data-service="Compra de equipo de aire acondicionado (asesoría)">Pedir recomendación</button>
+            <div class="mini">
+              <span class="tag soft">Proyectos</span>
+              <span class="tag">Ductería</span>
+            </div>
+            <h3>Fabricación e instalación de ductería</h3>
+            <p>Trabajo por alcance: inspección, propuesta y ejecución. Ideal para HVAC en proyectos y empresas.</p>
+            <button class="btn primary js-wa" data-service="Ductería (fabricación e instalación)">Hablar por WhatsApp</button>
           </div>
+
+          <div class="svc">
+            <div class="mini">
+              <span class="tag soft">Ventas</span>
+              <span class="tag">Equipos A/A</span>
+            </div>
+            <h3>Venta de equipos de aire acondicionado</h3>
+            <p>Marcas: Daikin, LG, Samsung, York, Midea, Carrier, Leno. Te recomendamos según necesidad. (Instalación no incluida en venta).</p>
+            <button class="btn primary js-wa" data-service="Compra de equipo de aire acondicionado (asesoría)">Pedir recomendación</button>
+          </div>
+        </div>
+
+        <div style="height:14px"></div>
+
+        <div class="grid2">
+          <div class="svc">
+            <h3>Servicios adicionales (a pedido)</h3>
+            <p>Drywall y sistemas contra incendios: se cotiza por alcance y coordinación previa.</p>
+            <button class="btn js-wa" data-service="Proyecto (Drywall / contra incendios) — cotización por alcance">Consultar por WhatsApp</button>
+          </div>
+
           <div class="svc">
             <h3>Venta de cómputo</h3>
-            <p>Si el cliente quiere mantenerlo aquí, lo dejamos como “servicio adicional”. Ideal separar campañas para no mezclar intención.</p>
-            <button class="btn js-wa" data-service="Venta de cómputo (consulta)">Consultar por WhatsApp</button>
+            <p>Servicio adicional. Si quieres cotización, indícanos presupuesto y uso (trabajo, gaming, oficina).</p>
+            <button class="btn js-wa" data-service="Venta de cómputo — consulta">Consultar por WhatsApp</button>
           </div>
         </div>
       </div>
@@ -477,8 +476,8 @@
       <div class="wrap">
         <div class="section-head">
           <div>
-            <h2>Cómo trabajamos (simple y sin fricción)</h2>
-            <p>Esto reduce “curiosos”: la persona entiende qué sigue y qué información necesitamos para cotizar bien.</p>
+            <h2>Cómo trabajamos</h2>
+            <p>Flujo real: <b>contacto → evaluación → solución</b>. Para visitar, necesitamos una persona responsable y acceso al área del equipo.</p>
           </div>
         </div>
 
@@ -486,22 +485,22 @@
           <div class="step">
             <div class="num">1</div>
             <div>
-              <b>Respondes 5 preguntas (o escribes directo)</b>
-              <span>Servicio, ubicación, tipo de espacio, urgencia y detalle del problema/equipo.</span>
+              <b>Nos escribes (WhatsApp 24/7)</b>
+              <span>Te pedimos: tipo de servicio, tipo de equipo, marca, capacidad aproximada, ubicación y problema.</span>
             </div>
           </div>
           <div class="step">
             <div class="num">2</div>
             <div>
-              <b>Te damos 2 opciones claras</b>
-              <span>Opción rápida (resolver ya) y opción recomendada (mejor costo/beneficio).</span>
+              <b>Evaluación y programación</b>
+              <span>Si requiere visita, agendamos en 24–48 h (según disponibilidad). Diagnóstico/visita sin costo (según coordinación).</span>
             </div>
           </div>
           <div class="step">
             <div class="num">3</div>
             <div>
-              <b>Agendamos y ejecutamos</b>
-              <span>Confirmamos horario, llegamos, realizamos el trabajo y validamos funcionamiento.</span>
+              <b>Solución</b>
+              <span>El tiempo de resolución depende del servicio técnico y del estado del equipo. Te explicamos el alcance antes de ejecutar.</span>
             </div>
           </div>
         </div>
@@ -514,7 +513,7 @@
           <div class="section-head" style="margin-bottom:6px">
             <div>
               <h2>Cotiza por WhatsApp (con filtro anti-curiosos)</h2>
-              <p>Completa esto y WhatsApp se abre con el mensaje armado. Así recibes leads más listos para comprar.</p>
+              <p>Este formulario arma el mensaje con los datos mínimos para cotizar (si no hay info mínima, no se atiende).</p>
             </div>
           </div>
 
@@ -522,7 +521,7 @@
             <div class="formgrid">
               <div>
                 <label for="name">Nombre</label>
-                <input id="name" name="name" placeholder="Ej: Carlos" required />
+                <input id="name" name="name" placeholder="Ej: Jairo" required />
               </div>
 
               <div>
@@ -533,16 +532,15 @@
                   <option>Reparación de aire acondicionado</option>
                   <option>Instalación de aire acondicionado</option>
                   <option>Ductería (fabricación e instalación)</option>
-                  <option>Drywall</option>
-                  <option>Sistema contra incendios</option>
+                  <option>Proyecto (Drywall / contra incendios)</option>
                   <option>Compra de equipo de aire acondicionado</option>
                   <option>Venta de cómputo</option>
                 </select>
               </div>
 
               <div>
-                <label for="zone">Ciudad/Zona</label>
-                <input id="zone" name="zone" placeholder="Ej: Centro / Norte / (tu ciudad)" required />
+                <label for="zone">Ubicación (distrito/zona)</label>
+                <input id="zone" name="zone" placeholder="Ej: San Miguel / Ate / (provincia)" required />
               </div>
 
               <div>
@@ -568,28 +566,50 @@
               </div>
 
               <div>
-                <label for="budget">Presupuesto estimado (opcional)</label>
-                <select id="budget" name="budget">
-                  <option value="" selected>No estoy seguro</option>
-                  <option>Básico</option>
-                  <option>Intermedio</option>
-                  <option>Premium</option>
+                <label for="equipType">Tipo de equipo</label>
+                <select id="equipType" name="equipType" required>
+                  <option value="" selected disabled>Selecciona</option>
+                  <option>Split / Mini split</option>
+                  <option>Ventana</option>
+                  <option>Central</option>
+                  <option>Piso-techo</option>
+                  <option>Otro</option>
                 </select>
               </div>
 
+              <div>
+                <label for="brand">Marca (si la sabes)</label>
+                <input id="brand" name="brand" placeholder="Ej: LG / Samsung / Daikin" />
+              </div>
+
+              <div>
+                <label for="btu">Capacidad aprox. (BTU) / modelo</label>
+                <input id="btu" name="btu" placeholder="Ej: 12,000 BTU / (modelo si lo tienes)" required />
+              </div>
+
               <div class="full">
-                <label for="details">Detalle (modelo, falla, fotos si tienes)</label>
-                <textarea id="details" name="details" placeholder="Ej: Split 12k BTU, no enfría, gotea por la unidad interna. Hace 6 meses no se da mantenimiento."></textarea>
+                <label for="details">Descripción del problema / requerimiento</label>
+                <textarea id="details" name="details" placeholder="Ej: No enfría, gotea por la unidad interna y hace ruido. Ubicación del equipo: techo / pared."></textarea>
+              </div>
+
+              <div class="full">
+                <label for="confirm">Antes de la visita, confirma (para evitar reprogramaciones)</label>
+                <select id="confirm" name="confirm" required>
+                  <option value="" selected disabled>Selecciona</option>
+                  <option>Habrá una persona responsable en el lugar</option>
+                  <option>Tengo permisos / acceso al área del equipo</option>
+                  <option>Daré indicaciones de ingreso</option>
+                </select>
               </div>
             </div>
 
             <div class="form-actions">
               <button class="btn primary" type="submit">Enviar a WhatsApp con mis datos</button>
-              <button class="btn js-wa" type="button" data-service="Cotización rápida (no quiero formulario)">Escribir directo (sin formulario)</button>
+              <button class="btn js-wa" type="button" data-service="Cotización rápida (sin formulario)">Escribir directo</button>
             </div>
 
             <p class="fineprint">
-              <span class="warning">Nota:</span> Atendemos solicitudes reales de servicio/proyecto. Si solo estás “cotizando por curiosidad”, es mejor esperar a tener fecha y ubicación definidas.
+              <span class="warning">Importante:</span> No atendemos solicitudes con información mínima incompleta. Si estás en provincia, puede aplicar recargo según ubicación.
             </p>
           </form>
         </div>
@@ -601,29 +621,39 @@
         <div class="section-head">
           <div>
             <h2>Preguntas frecuentes</h2>
-            <p>Resolvemos las dudas que más frenan la decisión.</p>
+            <p>Respuestas directas para que decidas rápido.</p>
           </div>
         </div>
 
         <div class="grid2">
           <details>
-            <summary>¿Dan precio por WhatsApp?</summary>
-            <p>Sí, si nos das datos mínimos (tipo de servicio, ubicación, equipo/problema). Para fallas complejas puede requerirse visita para diagnóstico.</p>
+            <summary>¿Dan cotización por WhatsApp?</summary>
+            <p>Sí. Para cotizar bien necesitamos: ubicación, tipo de equipo, capacidad aproximada y una descripción del problema. En reparaciones, el precio final depende del diagnóstico.</p>
           </details>
 
           <details>
-            <summary>¿Trabajan hogares y empresas?</summary>
-            <p>Sí. Para empresas/proyectos (ductería, contra incendios, drywall) se cotiza por alcance y visita/inspección.</p>
+            <summary>¿Atienden hoy?</summary>
+            <p>Sí, atendemos 24/7 por WhatsApp. La visita se agenda según disponibilidad (normalmente 24–48 h).</p>
           </details>
 
           <details>
-            <summary>¿Qué necesito enviar para cotizar mejor?</summary>
-            <p>Ubicación, tipo de espacio, urgencia, fotos del equipo/placa (si aplica) y una descripción breve del problema.</p>
+            <summary>¿Cuánto tarda una instalación?</summary>
+            <p>Depende del espacio, la ubicación del equipo y las condiciones del punto de instalación. Te confirmamos el tiempo estimado al evaluar.</p>
           </details>
 
           <details>
-            <summary>¿Cómo evito gastar de más?</summary>
-            <p>Con mantenimiento preventivo y una instalación correcta. Muchas “reparaciones” vienen de drenajes sucios, mala ubicación o falta de mantenimiento.</p>
+            <summary>¿Trabajan con empresas y facturan?</summary>
+            <p>Sí. Trabajamos con empresas y emitimos factura. Si tu empresa requiere orden de compra/contrato, lo coordinamos.</p>
+          </details>
+
+          <details>
+            <summary>¿Qué garantía ofrecen?</summary>
+            <p>En venta de equipos: garantía de 1 año (según condiciones de venta). En servicios, la garantía se detalla por WhatsApp según el trabajo realizado.</p>
+          </details>
+
+          <details>
+            <summary>¿Qué info necesitan para cotizar?</summary>
+            <p>Servicio requerido, tipo de equipo, marca, capacidad aproximada, ubicación y problema presentado. Con eso te damos la ruta más eficiente.</p>
           </details>
         </div>
 
@@ -632,8 +662,8 @@
         <div class="card" style="padding:18px">
           <div class="section-head" style="margin:0">
             <div>
-              <h2 style="margin-bottom:6px">¿Listo para cotizar?</h2>
-              <p>Haz clic y te abrimos WhatsApp con el mensaje pre-armado.</p>
+              <h2 style="margin-bottom:6px">Listo para cotizar</h2>
+              <p>Escríbenos por WhatsApp y te guiamos (contacto → evaluación → solución).</p>
             </div>
             <div>
               <button class="btn primary js-wa" data-service="Agendar servicio / cotización">📲 Cotizar por WhatsApp</button>
@@ -650,11 +680,11 @@
     <div class="wrap footgrid">
       <div>
         <div class="brand" style="margin-bottom:8px">
-          <div class="logo">AC</div>
-          <div style="font-weight:900">NOMBRE DE LA EMPRESA</div>
+          <div class="logo">ATM</div>
+          <div style="font-weight:900">ATM Smart Clima Service S.A.C.</div>
         </div>
         <div class="small">
-          Servicios: Aire acondicionado (reparación, mantenimiento e instalación) • Ductería • Drywall • Sistemas contra incendios • Venta de equipos • Venta de cómputo<br/>
+          Aire acondicionado (reparación, mantenimiento e instalación) • Ductería (fabricación e instalación) • Proyectos (drywall / contra incendios) • Venta de equipos • Venta de cómputo<br/>
           <span style="opacity:.9">© <span id="year"></span> — Todos los derechos reservados.</span>
         </div>
       </div>
@@ -674,10 +704,10 @@
 
   <script>
     // =========================
-    // CONFIG — CAMBIA ESTO
+    // CONFIG (ya actualizado)
     // =========================
-    const WHATSAPP_NUMBER = "51987341293"; // <-- pon aquí el número real en formato internacional, sin "+"
-    const COMPANY_NAME = "NOMBRE DE LA EMPRESA"; // opcional para el mensaje
+    const WHATSAPP_NUMBER = "51921589955"; // 51 921 589 955
+    const COMPANY_NAME = "ATM Smart Clima Service S.A.C.";
 
     function buildWaUrl(message){
       const encoded = encodeURIComponent(message);
@@ -689,23 +719,33 @@
       window.open(url, "_blank", "noopener,noreferrer");
     }
 
-    function baseMessage(service){
-      return `Hola, soy *[NOMBRE]*. Quiero cotizar: *${service}*.\n\n` +
-             `📍 Zona: [ZONA]\n🏠 Tipo de espacio: [ESPACIO]\n⏱️ Urgencia: [URGENCIA]\n💰 Presupuesto: [PRESUPUESTO]\n\n` +
-             `📝 Detalle: [DETALLE]\n\n` +
-             `¿Me confirmas disponibilidad y un estimado? Gracias.`;
-    }
-
-    // Quick buttons
+    // Botones rápidos (mensajes con preguntas clave)
     document.querySelectorAll(".js-wa").forEach(btn => {
       btn.addEventListener("click", () => {
         const service = btn.getAttribute("data-service") || "Cotización";
-        const msg = `Hola, quiero cotizar con *${COMPANY_NAME}*.\nServicio: *${service}*.\n\nMi zona es: ____\nTipo de espacio: (Hogar/Negocio/Empresa)\nUrgencia: (Hoy/24-48h/Esta semana)\nDetalle: ____\n\n¿Me ayudas con disponibilidad y estimado?`;
+        const msg =
+`Hola, quiero cotizar con *${COMPANY_NAME}*.
+✅ Servicio: *${service}*
+
+📍 Ubicación (distrito/zona): ___
+🏠 Tipo de espacio: (Hogar/Negocio/Empresa)
+⏱️ Urgencia: (Hoy/24-48h/Esta semana)
+❄️ Tipo de equipo: (Split/Ventana/Central/Piso-techo)
+🏷️ Marca: ___
+🔢 BTU / modelo aprox.: ___
+📝 Problema/Detalle: ___
+
+Antes de la visita confirmo:
+- Persona responsable en el lugar: Sí/No
+- Permisos/acceso al área: Sí/No
+- Indicaciones de ingreso: Sí/No
+
+¿Me confirmas disponibilidad y el siguiente paso?`;
         openWhatsApp(msg);
       });
     });
 
-    // Qualifier form -> WhatsApp
+    // Formulario calificador -> WhatsApp
     const form = document.getElementById("leadForm");
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -715,24 +755,34 @@
       const zone = (document.getElementById("zone").value || "").trim();
       const place = document.getElementById("place").value;
       const urgency = document.getElementById("urgency").value;
-      const budget = document.getElementById("budget").value || "No estoy seguro";
+      const equipType = document.getElementById("equipType").value;
+      const brand = (document.getElementById("brand").value || "").trim() || "No especifica";
+      const btu = (document.getElementById("btu").value || "").trim();
       const details = (document.getElementById("details").value || "").trim() || "Sin detalles adicionales por ahora.";
+      const confirm = document.getElementById("confirm").value;
 
-      let msg = baseMessage(service);
-      msg = msg.replace("[NOMBRE]", name)
-               .replace("[ZONA]", zone)
-               .replace("[ESPACIO]", place)
-               .replace("[URGENCIA]", urgency)
-               .replace("[PRESUPUESTO]", budget)
-               .replace("[DETALLE]", details);
+      const msg =
+`Hola, soy *${name}* y quiero cotizar con *${COMPANY_NAME}*.
 
-      msg = `Hola, soy *${name}* y quiero cotizar con *${COMPANY_NAME}*.\n\n` +
-            `✅ Servicio: *${service}*\n📍 Zona: *${zone}*\n🏠 Espacio: *${place}*\n⏱️ Urgencia: *${urgency}*\n💰 Presupuesto: *${budget}*\n\n📝 Detalle: ${details}\n\n¿Me confirmas disponibilidad y un estimado?`;
+✅ Servicio: *${service}*
+📍 Ubicación: *${zone}*
+🏠 Espacio: *${place}*
+⏱️ Urgencia: *${urgency}*
+❄️ Tipo de equipo: *${equipType}*
+🏷️ Marca: *${brand}*
+🔢 BTU / modelo: *${btu}*
+
+📝 Descripción: ${details}
+
+Confirmo para la visita:
+- *${confirm}*
+
+¿Me confirmas disponibilidad y el siguiente paso?`;
 
       openWhatsApp(msg);
     });
 
-    // Year
+    // Año
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
